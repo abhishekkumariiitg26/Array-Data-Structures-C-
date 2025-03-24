@@ -3,14 +3,14 @@
 #include<climits>
 using namespace std;
 
-vector<int> build_array(vector<int> &array){
+void build_array(vector<int> &array){
   
     cout<<"Enter the elements of the array: ";
     for (int i = 0; i < array.size(); i++)
     {
         cin>>array[i];
     }
-    return array;
+  
     
 }
 void print_array(vector<int> &array){
@@ -39,13 +39,13 @@ int main(){
     int size;
     cout<<"Enter the size of the array: ";
     cin>>size;
-    vector<int> array(size);
-    if (array.size()==0)
+    if (size<=0)
     {
         cout<<"The array is empty."<<endl;
+        return 0;
     }
     else{
-
+        vector<int> array(size);
         build_array(array);
         print_array(array);
         int largest=find_largest_element(array);
