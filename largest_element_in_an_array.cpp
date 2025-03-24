@@ -13,7 +13,7 @@ void build_array(vector<int> &array){
   
     
 }
-void print_array(vector<int> &array){
+void print_array(const vector<int> &array){
    
     cout<<"The elements of the array are: ";
     for(int item:array){
@@ -21,7 +21,7 @@ void print_array(vector<int> &array){
     }
 }
 
-int find_largest_element(vector<int> &array){
+int find_largest_element(const vector<int> &array){
     
     
     int ritik=INT_MIN;
